@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
 
 class AllExpenssesItemHeader extends StatelessWidget {
-  const AllExpenssesItemHeader({super.key, required this.image});
-
+  const AllExpenssesItemHeader(
+      {super.key, required this.image, required this.isActive});
+  final bool isActive;
   final String image;
   @override
   Widget build(BuildContext context) {
@@ -14,20 +14,22 @@ class AllExpenssesItemHeader extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 30,
-          backgroundColor: const Color(0xffFAFAFA),
+          backgroundColor:
+              isActive ? const Color(0xff5fbef3) : const Color(0xffFAFAFA),
           child: Center(
             child: SvgPicture.asset(
               image,
               // color: Colors.white,
-              // colorFilter:
-              //     const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(
+                  isActive ? Colors.white : const Color(0xff5fbef3),
+                  BlendMode.srcIn),
             ),
           ),
         ),
-        const Icon(
+        Icon(
           FontAwesomeIcons.angleRight,
           size: 18,
-          color: Color(0xff064061),
+          color: isActive ? Colors.white : const Color(0xff064061),
         ),
       ],
     );

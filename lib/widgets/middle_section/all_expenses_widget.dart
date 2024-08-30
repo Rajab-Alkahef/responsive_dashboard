@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:responsive_dashboard/models/all_expenses_item_model.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
-import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/widgets/middle_section/all_expenses_header.dart';
-import 'package:responsive_dashboard/widgets/middle_section/all_expenses_item.dart';
 import 'package:responsive_dashboard/widgets/middle_section/all_expenses_item_list_view.dart';
+
+import '../custom_background_widget.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: ShapeDecoration(
-          color: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          )),
-      child: const Column(
+    return const CustomBackground(
+      child: Column(
         children: [
           AllExpensesHeader(),
           SizedBox(
@@ -33,7 +23,7 @@ class AllExpenses extends StatelessWidget {
   }
 }
 
-double ResponsiveText(BuildContext context, {required double fontSize}) {
+double responsiveText(BuildContext context, {required double fontSize}) {
   double scalefactor = getScaleFactor(context);
   double responsivefontSize = fontSize * scalefactor;
   double lowerLimit = responsivefontSize * 0.8;

@@ -10,24 +10,33 @@ class RangeOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(12.0),
-      child: Row(
-        children: [
-          Text(
-            "Monthly",
-            style: AppStyles.styleSemiBold16,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 18.0),
-            child: Icon(
-              FontAwesomeIcons.angleDown,
-              size: 18,
-
-              // weight: Checkbox.width,
+    return Container(
+      decoration: ShapeDecoration(
+        shadows: const [BoxShadow(color: Colors.black)],
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+      child: const Padding(
+        padding: EdgeInsets.all(12.0),
+        child: Row(
+          children: [
+            Text(
+              "Monthly",
+              style: AppStyles.styleSemiBold16,
             ),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.only(left: 18.0),
+              child: Icon(
+                FontAwesomeIcons.angleDown,
+                size: 18,
+
+                // weight: Checkbox.width,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

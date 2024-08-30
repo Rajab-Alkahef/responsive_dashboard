@@ -4,7 +4,7 @@ import 'package:responsive_dashboard/widgets/middle_section/all_expenses_item.da
 
 import '../../models/all_expenses_item_model.dart';
 
-class AllExpensesItemListView extends StatelessWidget {
+class AllExpensesItemListView extends StatefulWidget {
   const AllExpensesItemListView({super.key});
 
   static const item = [
@@ -24,18 +24,39 @@ class AllExpensesItemListView extends StatelessWidget {
         date: 'April 2022',
         price: r'$20,129'),
   ];
+
+  @override
+  State<AllExpensesItemListView> createState() =>
+      _AllExpensesItemListViewState();
+}
+
+class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: item.asMap().entries.map((e) {
+        children: AllExpensesItemListView.item.asMap().entries.map((e) {
       int index = e.key;
       var item = e.value;
 
       return Expanded(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-        child: AllExpensesItem(
-          itemModel: item,
+        child: GestureDetector(
+          onTap: () {
+            if (selectedIndex != index) {
+              setState(() {
+                selectedIndex = index;
+                print(selectedIndex);
+              });
+            }
+            // print("object");
+          },
+          child: AllExpensesItem(
+            itemModel: item,
+            isActive: selectedIndex == index,
+          ),
         ),
       ));
     }).toList());

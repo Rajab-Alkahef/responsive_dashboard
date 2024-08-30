@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
+import 'package:responsive_dashboard/widgets/middle_section/add_invoice.dart';
 
-import '../../utils/app_styles.dart';
-import 'range_option.dart';
-
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({
-    super.key,
-  });
+class QuickInvoiceHeader extends StatelessWidget {
+  const QuickInvoiceHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +11,10 @@ class AllExpensesHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "All Expenses",
+          "Quick Invoice",
           style: AppStyles.styleSemiBold20,
         ),
-        RangeOption()
+        AddInvoice(),
       ],
     );
   }
