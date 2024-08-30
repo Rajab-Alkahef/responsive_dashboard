@@ -22,11 +22,14 @@ class DesktopLayout extends StatelessWidget {
             flex: 2,
             child: Column(
               children: [
-                // AllExpenses(),
+                SizedBox(
+                  height: 40,
+                ),
+                AllExpenses(),
                 SizedBox(
                   height: 24,
                 ),
-                QuickInvoice(),
+                Expanded(child: QuickInvoice()),
               ],
             ),
           ),
