@@ -22,7 +22,7 @@ class DesktopLayout extends StatelessWidget {
             flex: 2,
             child: Column(
               children: [
-                AllExpenses(),
+                // AllExpenses(),
                 SizedBox(
                   height: 24,
                 ),
