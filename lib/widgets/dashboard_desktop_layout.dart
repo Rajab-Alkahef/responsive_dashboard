@@ -8,7 +8,10 @@ import 'package:responsive_dashboard/widgets/drawer_item_section/custom_drawer.d
 import 'package:responsive_dashboard/widgets/middle_section/all_expenses_widget.dart';
 import 'package:responsive_dashboard/widgets/middle_section/middle_section.dart';
 import 'package:responsive_dashboard/widgets/middle_section/quick_invoice.dart';
+import 'package:responsive_dashboard/widgets/mycard_income_section/income_section.dart';
 import 'package:responsive_dashboard/widgets/mycard_income_section/my_card_transaction_history.dart';
+
+import 'middle_section/range_option.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -40,6 +43,10 @@ class DesktopLayout extends StatelessWidget {
                   height: 40,
                 ),
                 MyCardandTransactionHistory(),
+                SizedBox(
+                  height: 24,
+                ),
+                Expanded(child: IncomeSection()),
               ],
             ),
           ),

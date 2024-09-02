@@ -8,6 +8,7 @@ import 'package:responsive_dashboard/widgets/mycard_income_section/dots_indicato
 import 'package:responsive_dashboard/widgets/mycard_income_section/my_card.dart';
 import 'package:responsive_dashboard/widgets/mycard_income_section/my_card_section.dart';
 import 'package:responsive_dashboard/widgets/mycard_income_section/my_cards_page_view.dart';
+import 'package:responsive_dashboard/widgets/mycard_income_section/transaction_history.dart';
 
 class MyCardandTransactionHistory extends StatelessWidget {
   const MyCardandTransactionHistory({super.key});
@@ -16,8 +17,14 @@ class MyCardandTransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackground(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MyCardSection(),
+          Divider(
+            color: Color(0xffF1F1F1),
+            height: 40,
+          ),
+          TransactionHistory()
         ],
       ),
     );
