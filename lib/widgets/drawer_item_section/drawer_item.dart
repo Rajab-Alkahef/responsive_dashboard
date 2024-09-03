@@ -17,7 +17,7 @@ class _DrawerItemState extends State<DrawerItem> {
   @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 100),
       transitionBuilder: (Widget child, Animation<double> animation) {
         return FadeTransition(
           opacity: animation,

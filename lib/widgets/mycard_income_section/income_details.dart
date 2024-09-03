@@ -43,9 +43,15 @@ class IncomeItem extends StatelessWidget {
         decoration: ShapeDecoration(
             shape: const OvalBorder(), color: incomeDetailsModel.color),
       ),
-      title: Text(
-        incomeDetailsModel.title,
-        style: AppStyles.styleRegular16(context),
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          incomeDetailsModel.title,
+          style: AppStyles.styleRegular14(context).copyWith(
+            color: const Color(0xff064061),
+          ),
+        ),
       ),
       trailing: Text(
         incomeDetailsModel.value,

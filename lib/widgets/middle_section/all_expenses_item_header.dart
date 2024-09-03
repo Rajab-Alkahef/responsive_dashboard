@@ -12,17 +12,19 @@ class AllExpenssesItemHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor:
-              isActive ? const Color(0xff5fbef3) : const Color(0xffFAFAFA),
-          child: Center(
-            child: SvgPicture.asset(
-              image,
-              // color: Colors.white,
-              colorFilter: ColorFilter.mode(
-                  isActive ? Colors.white : const Color(0xff5fbef3),
-                  BlendMode.srcIn),
+        Flexible(
+          child: CircleAvatar(
+            radius: 30,
+            backgroundColor:
+                isActive ? const Color(0xff5fbef3) : const Color(0xffFAFAFA),
+            child: Center(
+              child: SvgPicture.asset(
+                image,
+                // color: Colors.white,
+                colorFilter: ColorFilter.mode(
+                    isActive ? Colors.white : const Color(0xff5fbef3),
+                    BlendMode.srcIn),
+              ),
             ),
           ),
         ),
