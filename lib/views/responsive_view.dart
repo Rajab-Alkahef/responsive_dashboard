@@ -24,7 +24,8 @@ class _ResponsiveViewState extends State<ResponsiveView> {
           ? AppBar(
               title: Text(
                 'Responsive Dashboard',
-                style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+                style: AppStyles.styleSemiBold16(context)
+                    .copyWith(color: Colors.white),
               ),
               // centerTitle: true,
               backgroundColor: const Color(0xff4EB7F2),

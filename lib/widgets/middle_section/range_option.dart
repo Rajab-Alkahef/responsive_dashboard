@@ -18,15 +18,15 @@ class RangeOption extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(12.0),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
         child: Row(
           children: [
             Text(
               "Monthly",
-              style: AppStyles.styleSemiBold16,
+              style: AppStyles.styleSemiBold16(context),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 18.0),
               child: Icon(
                 FontAwesomeIcons.angleDown,

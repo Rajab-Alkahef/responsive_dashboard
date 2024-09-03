@@ -42,7 +42,7 @@ class _DetailedChartState extends State<DetailedChart> {
       sections: [
         PieChartSectionData(
           // showTitle: false,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 0 ? null : Colors.white),
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
           title: activeIndex == 0 ? "Design service" : '40%',
@@ -53,7 +53,7 @@ class _DetailedChartState extends State<DetailedChart> {
         ),
         PieChartSectionData(
           // showTitle: false,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 1 ? null : Colors.white),
           titlePositionPercentageOffset: activeIndex == 1 ? 2.2 : null,
           title: activeIndex == 1 ? "Design product" : '25%',
@@ -65,9 +65,9 @@ class _DetailedChartState extends State<DetailedChart> {
         ),
         PieChartSectionData(
           // showTitle: false,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 2 ? null : Colors.white),
-          titlePositionPercentageOffset: activeIndex == 2 ? 1.35 : null,
+          titlePositionPercentageOffset: activeIndex == 2 ? 1.40 : null,
           title: activeIndex == 2 ? "Product royalti" : '20%',
 
           color: const Color(0xff064061),
@@ -77,7 +77,7 @@ class _DetailedChartState extends State<DetailedChart> {
         ),
         PieChartSectionData(
           // showTitle: false,
-          titleStyle: AppStyles.styleMedium16,
+          titleStyle: AppStyles.styleMedium16(context),
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
           title: activeIndex == 3 ? "Other" : '22%',
 

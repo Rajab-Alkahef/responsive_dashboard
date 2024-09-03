@@ -13,7 +13,13 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackground(
       child: Column(
-        children: [IncomeSectionHeader(), IncomeSectionBody()],
+        children: [
+          IncomeSectionHeader(),
+          IncomeSectionBody(),
+          // SizedBox(
+          //   height: 24,
+          // )
+        ],
       ),
     );
   }

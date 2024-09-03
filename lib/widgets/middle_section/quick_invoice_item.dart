@@ -13,7 +13,7 @@ class QuickInvoiceItem extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
           height: 12,
@@ -30,7 +30,7 @@ class QuickInvoiceItem extends StatelessWidget {
 
             contentPadding: const EdgeInsets.all(20.0),
             hintText: content,
-            hintStyle: AppStyles.styleRegular16
+            hintStyle: AppStyles.styleRegular16(context)
                 .copyWith(color: const Color(0xffaaaaaa)),
             suffixIcon: icon,
           ),

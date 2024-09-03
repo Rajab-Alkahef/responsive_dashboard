@@ -37,8 +37,9 @@ class AllExpensesItem extends StatelessWidget {
             Text(
               itemModel.title,
               style: isActive
-                  ? AppStyles.styleSemiBold16.copyWith(color: Colors.white)
-                  : AppStyles.styleSemiBold16,
+                  ? AppStyles.styleSemiBold16(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold16(context),
             ),
             const SizedBox(
               height: 8,
@@ -46,8 +47,9 @@ class AllExpensesItem extends StatelessWidget {
             Text(
               itemModel.date,
               style: isActive
-                  ? AppStyles.styleRegular14.copyWith(color: Colors.white)
-                  : AppStyles.styleRegular14,
+                  ? AppStyles.styleRegular14(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.styleRegular14(context),
             ),
             const SizedBox(
               height: 16,
@@ -55,8 +57,9 @@ class AllExpensesItem extends StatelessWidget {
             Text(
               itemModel.price,
               style: isActive
-                  ? AppStyles.styleSemiBold24.copyWith(color: Colors.white)
-                  : AppStyles.styleSemiBold24,
+                  ? AppStyles.styleSemiBold24(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold24(context),
             ),
           ],
         ),
