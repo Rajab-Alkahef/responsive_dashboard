@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/widgets/middle_section/custom_button.dart';
 import 'package:responsive_dashboard/widgets/middle_section/quick_invoice_item.dart';
 

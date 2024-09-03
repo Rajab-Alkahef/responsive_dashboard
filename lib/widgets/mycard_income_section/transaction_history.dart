@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/models/transaction_history_model.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
 
 import 'package:responsive_dashboard/widgets/mycard_income_section/transaction_history_header.dart';
 import 'package:responsive_dashboard/widgets/mycard_income_section/transaction_history_list_view.dart';
-import 'package:responsive_dashboard/widgets/mycard_income_section/transaction_histoty_item.dart';
 
 class TransactionHistory extends StatelessWidget {
   const TransactionHistory({super.key});

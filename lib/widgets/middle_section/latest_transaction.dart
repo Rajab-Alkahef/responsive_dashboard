@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/models/user_info_model.dart';
-import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
-import 'package:responsive_dashboard/widgets/drawer_item_section/user_info_listtile.dart';
 import 'package:responsive_dashboard/widgets/middle_section/latest_transaction_list_view.dart';
 
 class LatestTransaction extends StatelessWidget {

@@ -18,7 +18,7 @@ class MiddleSection extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        Expanded(child: QuickInvoice()),
+        QuickInvoice(),
       ],
     );
   }
