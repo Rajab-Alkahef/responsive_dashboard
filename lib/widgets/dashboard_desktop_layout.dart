@@ -22,12 +22,29 @@ class DesktopLayout extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: MiddleSection(),
-          ),
-          SizedBox(
-            width: 24,
-          ),
-          Expanded(flex: 2, child: MyCardIncomeSection()),
+            child: CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: MiddleSection(),
+                      ),
+                      SizedBox(
+                        width: 24,
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: MyCardIncomeSection(),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

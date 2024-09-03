@@ -15,7 +15,7 @@ class _ChartState extends State<Chart> {
     return AspectRatio(
       aspectRatio: 1,
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(8.0),
         child: PieChart(
           getPieChartData(),
         ),
